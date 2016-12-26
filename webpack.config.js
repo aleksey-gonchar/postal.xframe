@@ -19,30 +19,16 @@ module.exports = {
 	devtool: "#inline-source-map",
 	externals: [
     {
-	postal: true,
-	lodash: {
-		root: "_",
-		commonjs: "lodash",
-		commonjs2: "lodash",
-		amd: "lodash"
-	}
+			postal: true,
+			lodash: {
+				root: "_",
+				commonjs: "lodash",
+				commonjs2: "lodash",
+				amd: "lodash"
+			}
     }
   ],
-	module: {
-		loaders: [
-      {
-	test: /\.js?$/,
-	exclude: /(node_modules|bower_components)/,
-	loader: "babel",
-	query: {
-					auxiliaryCommentBefore: "istanbul ignore next",
-					compact: false,
-					presets: [ "es2015" ]
-				}
-      }
-    ]
-	},
 	plugins: [
-	new webpack.BannerPlugin( header )
+		new webpack.BannerPlugin( header )
 	]
 };

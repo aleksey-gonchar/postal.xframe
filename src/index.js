@@ -1,5 +1,6 @@
-import _ from "lodash";
-import postal from "postal";
+const _ = require("lodash")
+const postal = require("postal")
+
 import {
 	_memoRemoteByInstanceId,
 	_memoRemoteByTarget,
